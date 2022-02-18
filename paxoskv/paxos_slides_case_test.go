@@ -135,7 +135,7 @@ func TestCase2DoubleProposer(t *testing.T) {
 	// Proposer X then propose the seen value and finish phase-2
 
 	px.Val = latestVal
-	higherBal, err = px.Phase2([]int64{0, 1}, quorum)
+	higherBal, err = px.Phase2([]int64{0, 1, 2}, quorum)
 	ta.Nil(err, "Proposer X should succeed in phase-2")
 	ta.Nil(higherBal, "X should succeed")
 
